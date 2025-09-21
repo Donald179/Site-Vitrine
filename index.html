@@ -88,9 +88,8 @@
     <span class="old-price">60.000FCFA</span>
     <span class="new-price">55.000FCFA</span>
   </p>
-<!-- ...dans chaque .product-card... -->
 <a class="whatsapp-btn" href="#" data-nom="Redmi A5" data-img="redmiA5.jfif">Ajouter au panier</a>
-<!-- ...idem pour les autres produits, adapte data-nom et data-img... --></div>
+</div>
 <div class="product-card">
      <span class="badge">Promo</span>
      <img src="image/dell1.jpg" alt="Smartphone Pro Max">
@@ -105,7 +104,7 @@
     <span class="old-price">200.000FCFA</span>
     <span class="new-price">190.000FCFA</span>
   </p>
-  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
 </div>
     <div class="product-card">
      <span class="badge">Promo</span>
@@ -135,6 +134,21 @@
   </p>
   <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
 </div>
+      <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/redmiA5.jfif" alt="Smartphone Pro Max">
+     <p> Smartphones</p>
+     <h3>Iphone 11 PRO</h3>
+     <ul>
+      <li>128GB</li>
+      <li>5G</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">180.000FCFA</span>
+    <span class="new-price">177.500FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
+</div>
 </div>
 
   </section>
@@ -144,7 +158,7 @@
       e.preventDefault();
       const nom = this.getAttribute('data-nom');
       const img = this.getAttribute('data-img');
-      const message = `Je suis intéressé, plus en savoir plus sur cet article : ${nom} -https://donald179.github.io/Site-vitrine-Tech/${img}`;
+      const message = `Je suis intéressé, plus en savoir plus sur cet article : ${nom} -https://donald179.github.io/Site-vitrine-Tech/image/${img}`;
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/22655757299?text=${encodedMessage}`;
       window.open(whatsappURL, '_blank');
