@@ -636,4 +636,82 @@ footer .reseaux-sociaux a {
   color: #000000;
   font-size: 2.0em;
   text-align: center;
+
+}
+
+/* Responsive pour mobile */
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    position: static;
+  }
+  .logo-titre {
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  nav a, nav button {
+    font-size: 1em;
+    margin: 5px 0;
+    padding: 8px 12px;
+  }
+  .accueil {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 8px;
+  }
+  .accueil > .partie1,
+  .accueil > .partie2 {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 16px 8px;
+  }
+  .catalogue, .telephone, .Ordinateurs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .product-card {
+    width: 40vw;
+    min-width: 0;
+    margin: 0 auto;
+  }
+  hr{
+    width: 368px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 8px;
+    text-align: center;
+  }
+  footer section {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+  }
+  .reseaux-sociaux a {
+    font-size: 1.3em;
+    margin: 0 6px;
+  }
+  #scrollToTopBtn {
+    right: 12px;
+    bottom: 12px;
+    width: 48px;
+    height: 48px;
+  }
 }
