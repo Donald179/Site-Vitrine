@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | TechExpert</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <style>
+    body {
+      background: #f5faff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-container {
+      max-width: 900px;
+      margin: 60px auto 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .contact-info {
+      flex: 1 1 300px;
+      background: #007bff;
+      color: #fff;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+    .contact-info h2 {
+      margin-top: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    .contact-info p, .contact-info a {
+      font-size: 1.1em;
+      margin: 0;
+      color: #fff;
+      text-decoration: none;
+    }
+    .contact-info i {
+      margin-right: 10px;
+      color: #fff;
+    }
+    .contact-info .reseaux {
+      margin-top: 20px;
+    }
+    .contact-info .reseaux a {
+      margin-right: 18px;
+      font-size: 1.5em;
+      color: #fff;
+      transition: color 0.2s;
+    }
+    .contact-info .reseaux a:hover {
+      color: #ffe600;
+    }
+    .contact-form {
+      flex: 2 1 400px;
+      padding: 40px 30px;
+      background: #f5faff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-form h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #007bff;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #fff;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #0056b3;
+    }
+    .contact-map {
+      width: 100%;
+      height: 220px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+      }
+      .contact-info, .contact-form {
+        padding: 30px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-titre">
+      <img src="image/icone.png" alt="Logo" style="height:48px;">
+      <h1>TechExpert</h1>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="contact.html">Contact</a>
+      <button onclick="window.location.href='index.html#produits'">Nos Produits</button>
+    </nav>
+  </header>
+  <br><br><br><br>
+  <main>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contactez-nous</h2>
+        <p><i class="fa-solid fa-envelope"></i> lamiendonaldo179@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +226 55-75-72-99</p>
+        <p><i class="fa-solid fa-location-dot"></i> Secteur 18, Bobo-Dioulasso, Burkina Faso</p>
+        <div class="reseaux">
+          <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@techexpert35?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/c/22655757299" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Envoyez-nous un message</h3>
+<form id="contactForm">
+  <input type="text" name="nom" placeholder="Votre nom" required>
+  <input type="email" name="email" placeholder="Votre email" required>
+  <input type="text" name="objet" placeholder="Objet" required>
+  <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+        <iframe class="contact-map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-4.309%2C11.178%2C-4.299%2C11.188&amp;layer=mapnik"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const nom = this.nom.value;
+  const email = this.email.value;
+  const objet = this.objet.value;
+  const message = this.message.value;
+  const destinataire = "lamiendonaldo179@gmail.com";
+  const sujet = encodeURIComponent(objet);
+  const corps = encodeURIComponent(
+    message
+  );
+  window.location.href = `mailto:${destinataire}?subject=${sujet}&body=${corps}`;
+});
+</script>
+    </div>
+  </main>
+  <footer>
+    <!-- Ton footer habituel ici -->
+  </footer>
+</body>
+</html>

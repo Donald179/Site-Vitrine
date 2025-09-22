@@ -6,23 +6,27 @@
   <title>Votre Expert en Technologie</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  
+  <link rel="stylesheet" href="ajouter_produit.php">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 
 <!-- le corps de la page -->
 <body>
     <!-- en-tête avec logo et titre -->
   <header> 
-    <div class="logo-titre">
+    <a href="index.html">
+          <div class="logo-titre">
       <img src="image/icone.png" alt="Logo">
       <h1>TechExpert</h1>
     </div>
+    </a>
 
     <!-- les liens de navigation -->
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="#produits">Produits</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
+                <button onclick="scrollToSection()">Nos Produits</button>
     </nav>
   </header>
 <br><br><br><br>
@@ -51,7 +55,7 @@
         <div class="statistiques">
             <div class="expériences">
                 <p>Expériences: </p>
-                <p>8+ années</p>
+                <p>3+ années</p>
             </div>
             <div class="avis">
                 <p>Produits vendus:</p>
@@ -63,8 +67,25 @@
             </div>
         </div>
     </div>
-    
 </div>
+
+<div class="categorie-produits">
+</div>
+
+<div class="categorie">
+          <button onclick="scrollToSectionsmart()">Nos Smartphones</button>
+                    <button onclick="scrollToSectionpc()">Nos Ordinateurs</button>
+</div>
+<div class="whatsapp">
+                      <button id="catalogueWhatsappBtn" style="background:#25D366;color:#fff;padding:12px 18px;border:none;border-radius:6px;font-size:1.1em;cursor:pointer;">
+  <i class="fa-brands fa-whatsapp"></i> Voir notre Catalogue
+</button>
+</div>
+<script>
+document.getElementById('catalogueWhatsappBtn').onclick = function() {
+  window.open('https://wa.me/c/22655757299', '_blank');
+};
+</script>
   
 <div id="accueil_produits">
     <h2>Promotion de rentrée scolaire</h2>
@@ -76,7 +97,7 @@
     <div class="catalogue">
       <div class="product-card">
      <span class="badge">Promo</span>
-     <img src="image/redmiA5.jfif" alt="Smartphone Pro Max">
+     <img src="image/redmiA5.jpg" alt="Smartphone Pro Max">
      <p> Smartphones</p>
      <h3>Redmi A5</h3>
      <ul>
@@ -108,7 +129,7 @@
 </div>
     <div class="product-card">
      <span class="badge">Promo</span>
-     <img src="image/IphoneXR.jfif" alt="Smartphone Pro Max">
+     <img src="image/IphoneXR.jpg" alt="Smartphone Pro Max">
      <p> Smartphone </p>
      <h3>Iphone XR</h3>
      <ul>
@@ -120,9 +141,52 @@
   </p>
   <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
 </div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/redmi13C.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Redmi 13C</h3>
+     <ul>
+      <li>128GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">65.000FCFA</span>
+    <span class="new-price">60.000FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/redmi14C.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Redmi 14C</h3>
+     <ul>
+      <li>128GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">75.000FCFA</span>
+    <span class="new-price">70.000FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/tecnopop10.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Tecno POP 10</h3>
+     <ul>
+      <li>64GB</li>
+      <li>4GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">60.000FCFA</span>
+    <span class="new-price">57.500FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
     <div class="product-card">
      <span class="badge">Promo</span>
-     <img src="image/iphone11.jfif" alt="Smartphone Pro Max">
+     <img src="image/iphone11.jpg" alt="Smartphone Pro Max">
      <p> Smartphone </p>
      <h3>Iphone 11</h3>
      <ul>
@@ -134,14 +198,28 @@
   </p>
   <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
 </div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/tecnospark40.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Tecno Spark 40</h3>
+     <ul>
+      <li>128GB</li>
+      <li>8GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">77.000FCFA</span>
+    <span class="new-price">75.000FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
       <div class="product-card">
      <span class="badge">Promo</span>
-     <img src="image/redmiA5.jfif" alt="Smartphone Pro Max">
+     <img src="image/iphone11pro.jpg" alt="Smartphone Pro Max">
      <p> Smartphones</p>
      <h3>Iphone 11 PRO</h3>
      <ul>
-      <li>128GB</li>
-      <li>5G</li>
+      <li>256GB</li>
    </ul>
   <p class="price">
     <span class="old-price">180.000FCFA</span>
@@ -149,21 +227,253 @@
   </p>
 <a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
 </div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/hpprobook.jpg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3>Hp probook</h3>
+     <ul>
+      <li>256GB SSD</li>
+      <li>Ecran 14</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">220.000FCFA</span>
+    <span class="new-price">210.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/macbook.jpeg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3> Macbook Pro 2015 </h3>
+     <ul>
+      <li>256GB SSD</li>
+      <li>Ecran</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">200.000FCFA</span>
+    <span class="new-price">190.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
+ <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/galaxyA17.jpg" alt="Smartphone Pro Max">
+     <p> Smartphones</p>
+     <h3>Samsung Galaxy A17</h3>
+     <ul>
+      <li>128GB</li>
+      <li>8GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">125.000FCFA</span>
+    <span class="new-price">120.500FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
+</div>
+</div>
+<br><br>
+<hr>
+<br><br>
+  </section>
+</div>
+        <script>
+          function scrollToSectionsmart(){
+            document.getElementById("produits-smartphone").scrollIntoView({ behavior:"smooth"});
+          }
+        </script>
+        <br><br>
+<div id="produits-smartphone">
+  <h2> Les Téléphones de Nouvelle génération</h2>
+  <br><br>
+  <section class="telephone">
+    <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/iphone11.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Iphone 11</h3>
+     <ul>
+      <li>128GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">135.000FCFA</span>
+    <span class="new-price">130.000FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/tecnospark40.jpg" alt="Smartphone Pro Max">
+     <p> Smartphone </p>
+     <h3>Tecno Spark 40</h3>
+     <ul>
+      <li>128GB</li>
+      <li>8GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">77.000FCFA</span>
+    <span class="new-price">75.000FCFA</span>
+  </p>
+  <a class="whatsapp-btn" href="https://wa.me/226XXXXXXXXX?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+le+Smartphone+Pro+Max+%21" target="_blank">Ajouter au panier</a>
+</div>
+      <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/iphone11pro.jpg" alt="Smartphone Pro Max">
+     <p> Smartphones</p>
+     <h3>Iphone 11 PRO</h3>
+     <ul>
+      <li>256GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">180.000FCFA</span>
+    <span class="new-price">177.500FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
+</div>
+     <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/infinixsmart10.jpg" alt="Smartphone Pro Max">
+     <p> Smartphones</p>
+     <h3>Infinix Smart 10</h3>
+     <ul>
+      <li>64GB</li>
+      <li>4GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">50.000FCFA</span>
+    <span class="new-price">45.500FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
+</div>
+     <div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/infinixhot50I.jpg" alt="Smartphone Pro Max">
+     <p> Smartphones</p>
+     <h3>Infinix Hot 50i</h3>
+     <ul>
+      <li>128GB</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">70.000FCFA</span>
+    <span class="new-price">65.500FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Iphone 11 PRO" data-img="iphone11pro.jpg">Ajouter au panier</a>
+</div>
+  </section>
 </div>
 
+        <script>
+          function scrollToSectionpc(){
+            document.getElementById("produits-ordinateurs").scrollIntoView({ behavior:"smooth"});
+          }  
+        </script>
+<br><br>
+        <hr>
+        <br><br>
+<div id="produits-ordinateurs">
+  <h2> Des Ordinateurs de  nouvelle Génération</h2>
+  <br><br><br>
+  <section class="Ordinateurs">
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/dell1.jpg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3>Dell Lattitude 8390</h3>
+     <ul>
+      <li>256GB SSD</li>
+      <li>Ecran 14 Tactile</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">200.000FCFA</span>
+    <span class="new-price">190.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/hphélitebook.jpg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3>Hp Helitbook</h3>
+     <ul>
+      <li>512GB SSD</li>
+      <li>Ecran 14 Tactile</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">270.000FCFA</span>
+    <span class="new-price">250.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/hpprobook.jpg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3>Hp probook</h3>
+     <ul>
+      <li>256GB SSD</li>
+      <li>Ecran 14</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">220.000FCFA</span>
+    <span class="new-price">210.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
+<div class="product-card">
+     <span class="badge">Promo</span>
+     <img src="image/macbook.jpeg" alt="Smartphone Pro Max">
+     <p> Ordinateurs </p>
+     <h3> Macbook Pro 2015 </h3>
+     <ul>
+      <li>256GB SSD</li>
+      <li>Ecran</li>
+      <li>8GB RAM</li>
+   </ul>
+  <p class="price">
+    <span class="old-price">200.000FCFA</span>
+    <span class="new-price">190.000FCFA</span>
+  </p>
+<a class="whatsapp-btn" href="#" data-nom="Dell Lattitude 8390" data-img="dell1.jpg">Ajouter au panier</a>
+</div>
   </section>
-  <script>
-  document.querySelectorAll('.whatsapp-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const nom = this.getAttribute('data-nom');
-      const img = this.getAttribute('data-img');
-      const message = `Je suis intéressé, plus en savoir plus sur cet article : ${nom} -https://donald179.github.io/Site-vitrine-Tech/image/${img}`;
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappURL = `https://wa.me/22655757299?text=${encodedMessage}`;
-      window.open(whatsappURL, '_blank');
+</div>
+<!-- Bouton retour en haut avec jauge -->
+<div id="scrollToTopBtn">
+<span class="arrow"><i class="fa-solid fa-arrow-up"></i></span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollBtn = document.getElementById('scrollToTopBtn');
+  if(scrollBtn){
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  }
+});
+</script>
+
+
+<script>
+document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const nom = this.getAttribute('data-nom');
+    const img = this.getAttribute('data-img');
+    // URL absolue de l'image (adapte si besoin)
+    const imgUrl = `https://donald179.github.io/Site-vitrine-Tech/image/${img}`;
+    const message = `Je suis intéressé par "${nom}". C'est toujours disponible ??\nAperçu : ${imgUrl}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/22655757299?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
   });
+});
 </script>
 
   <footer>
@@ -177,8 +487,8 @@
       </div>
       <div class="reseaux-sociaux">
         <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-        <a href="www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@techexpert35?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://wa.me/c/22655757299"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </section>
     <section class="partie2">
@@ -199,12 +509,13 @@
       <h2>Liens Rapides</h2>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="#produits">Nos Produits</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#produits">Nos produits</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </section>
   </footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>

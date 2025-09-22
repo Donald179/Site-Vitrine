@@ -44,11 +44,23 @@ header h1 {
   color: #000000;
   text-align: left;     /* Aligne le titre à gauche */
 }
+header a{
+  text-decoration: none;
+}
 
 nav {
   margin-bottom: 0;     /* Supprime le margin si dans le header */
 }
 
+header nav button{
+  background-color: #0026ff;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+header nav button:hover{
+  transform: scale(1.1);
+}
 nav a {
   margin: 0 15px;       /* Espace entre les liens de navigation */
   text-decoration: none;
@@ -317,13 +329,64 @@ section1, section2, section3, section4 {
   margin-top: 10px;
 }
 .product-card {
-  margin-left: 40px;
-  width: 250px;
+  margin-left: 60px;
+  width: 230px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
   position: relative;
+}
+.categorie{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-left: 38%;
+  gap: 20px;
+}
+.parie3 ul li button{
+  background-color: #000000;
+  color: white;
+}
+.whatsapp{
+  text-align: center;
+}
+.whatsapp #catalogueWhatsappBtn:hover{
+  transform: scale(1.1);
+}
+.categorie button a:hover{
+  color: #000000;
+}
+.categorie button{
+  background-color:#3d5aff ;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.categorie button:hover{
+  transform: scale(1.1);
+  background-color: white;
+  border-color: #0026ff;
+  color: #000000;
+}
+hr{
+  width: 1000px;
+  height: 2px;
+  box-shadow: 0 6px 12px #000000;
+}
+#Smartphone h2{
+  color: black;
+  font-size: 1.8em;
+  text-align: center;
+}
+.categorie-produits button{
+  background-color: #0026ff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.categorie-produits button:hover{
+  transform: scale(1.1);
 }
 .product-card:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -532,4 +595,45 @@ footer .reseaux-sociaux a {
 }
 .partie1 button:hover{
   transform: scale(1.1);
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+#scrollToTopBtn .arrow i {
+  font-size: 2em;
+  color: #007bff;
+}
+.telephone{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Ordinateurs{
+  display: flex;
+  flex-wrap: wrap;
+}
+#produits-ordinateurs h2{
+  color: #000000;
+  font-size: 2.0em;
+  text-align: center;
+}
+#produits-smartphone h2{
+  color: #000000;
+  font-size: 2.0em;
+  text-align: center;
 }
